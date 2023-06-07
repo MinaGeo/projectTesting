@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="510.0" prefWidth="769.0" style="-fx-background-color: #060047;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ItemsBuy">
+    <children>
+        <Button fx:id="returnButton" layoutX="132.0" layoutY="400.0" mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: #e90064;" text="Return to home" textFill="WHITE">
+            <font>
+                <Font name="Bank Gothic Light BT" size="13.0" />
+            </font>
+        </Button>
+        <Text fill="#e90064" layoutX="538.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="price" textAlignment="CENTER">
+            <font>
+                <Font name="Bank Gothic Light BT" size="24.0" />
+            </font>
+        </Text>
+        <Text fill="#e90064" layoutX="112.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Show items" textAlignment="CENTER" wrappingWidth="566.3035278320312">
+            <font>
+                <Font name="Bank Gothic Light BT" size="36.0" />
+            </font>
+        </Text>
+        <Text fill="#e90064" layoutX="386.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="id" textAlignment="CENTER">
+            <font>
+                <Font name="Bank Gothic Light BT" size="24.0" />
+            </font>
+        </Text>
+        <Text fx:id="itemsId" fill="WHITE" layoutX="386.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER">
+            <font>
+                <Font name="Bank Gothic Light BT" size="18.0" />
+            </font>
+        </Text>
+        <Text fx:id="price" fill="WHITE" layoutX="534.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER">
+            <font>
+                <Font name="Bank Gothic Light BT" size="18.0" />
+            </font>
+        </Text>
+        <Button fx:id="showItemsButton" layoutX="349.0" layoutY="97.0" mnemonicParsing="false" onAction="#showItems" prefHeight="23.0" prefWidth="98.0" style="-fx-background-color: #e90064;" text="Show Items" textFill="WHITE">
+            <font>
+                <Font name="Bank Gothic Light BT" size="13.0" />
+            </font>
+        </Button>
+      <Text fill="#e90064" layoutX="163.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" textAlignment="CENTER">
+         <font>
+            <Font name="Bank Gothic Light BT" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="itemsName" fill="WHITE" layoutX="157.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER">
+         <font>
+            <Font name="Bank Gothic Light BT" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="obtainId" alignment="CENTER" layoutX="514.0" layoutY="385.0" prefHeight="26.0" prefWidth="109.0" promptText="Item id" />
+      <Button fx:id="buyItemButton" layoutX="514.0" layoutY="422.0" mnemonicParsing="false" onAction="#buyItems" prefHeight="23.0" prefWidth="110.0" style="-fx-background-color: #e90064;" text="Buy" textFill="WHITE">
+         <font>
+            <Font name="Bank Gothic Light BT" size="13.0" />
+         </font>
+      </Button>
+      <TextField fx:id="accountSn" alignment="CENTER" layoutX="515.0" layoutY="350.0" prefHeight="26.0" prefWidth="109.0" promptText="Account SN" />
+      <Text fill="#e90064" layoutX="385.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account sn" textAlignment="CENTER">
+         <font>
+            <Font name="Bank Gothic Light BT" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e90064" layoutX="385.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item's id" textAlignment="CENTER">
+         <font>
+            <Font name="Bank Gothic Light BT" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="warning" fill="WHITE" layoutX="504.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="Bank Gothic Light BT" size="14.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>
