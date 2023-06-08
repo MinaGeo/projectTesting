@@ -41,9 +41,9 @@ try {
         int showMe = randomNum.nextInt(1000);
         String randomnumber = String.valueOf(showMe);
 
-        Transaction transaction = new Transaction(randomnumber, new Date(), amountWithdraw, "Withdraw", null, null);
 
         if (account != null) {
+            Transaction transaction = new Transaction(randomnumber, new Date(), amountWithdraw, "Withdraw", null, null);
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Transaction details");
             alert.setHeaderText(null);

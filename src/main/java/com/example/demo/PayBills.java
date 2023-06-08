@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Date;
+import java.util.Random;
 
 public class PayBills {
 
@@ -31,6 +32,11 @@ public class PayBills {
                 Account account = Account.validation(id, "test");
 
                 if (account != null) {
+                    Random randomNum = new Random();
+                    int showMe = randomNum.nextInt(1000);
+                    String randomnumber = String.valueOf(showMe);
+                    Date date = new Date();
+                     new Transaction(randomnumber, date, Account.returnBillPrice(bills) , "bill: "+bills,id , null);
                     warning.setText(account.payBill(bills));
                 } else {
                     warning.setText("Account doesn't exist");

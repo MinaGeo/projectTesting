@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Date;
+import java.util.Random;
 
 public class ItemsBuy {
 
@@ -39,7 +40,12 @@ public class ItemsBuy {
             if (obtainId.getText() != "" && accountSn.getText() != "") {
                 String itemId = obtainId.getText().toString().toUpperCase();
                 String accountID = accountSn.getText().toString();
-                Transaction transaction = new Transaction();
+
+                Random randomNum = new Random();
+                int showMe = randomNum.nextInt(1000);
+                String randomnumber = String.valueOf(showMe);
+                Date date = new Date();
+                Transaction transaction = new Transaction(randomnumber, date, Transaction.returnItemPrice(itemId) , "Bought "+itemId,accountID , null);
                 warning.setText(transaction.buyItem(itemId, accountID));
             } else {
                 warning.setText("Please enter valid data");

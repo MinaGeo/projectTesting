@@ -12,7 +12,7 @@
                 <Font name="Bank Gothic Light BT" size="13.0" />
             </font>
         </Button>
-        <Button fx:id="returnButton" layoutX="250.0" layoutY="390.0" mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: #e90064;" text="Return to home" textFill="WHITE">
+        <Button fx:id="returnButton" layoutX="314.0" layoutY="417.0" mnemonicParsing="false" onAction="#returnHome" prefHeight="23.0" prefWidth="129.0" style="-fx-background-color: #e90064;" text="Return to home" textFill="WHITE">
             <font>
                 <Font name="Bank Gothic Light BT" size="13.0" />
             </font>
@@ -37,7 +37,12 @@
             <Font name="Bank Gothic Light BT" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="buyButton" layoutX="293.0" layoutY="315.0" mnemonicParsing="false" onAction="#buyItemsFunction" prefHeight="39.0" prefWidth="174.0" style="-fx-background-color: #e90064;" text="Buy items" textFill="WHITE">
+      <Button fx:id="buyButton" layoutX="293.0" layoutY="312.0" mnemonicParsing="false" onAction="#buyItemsFunction" prefHeight="39.0" prefWidth="174.0" style="-fx-background-color: #e90064;" text="Buy items" textFill="WHITE">
+         <font>
+            <Font name="Bank Gothic Light BT" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="showTransactionsButton" layoutX="293.0" layoutY="363.0" mnemonicParsing="false" onAction="#showTransactions" prefHeight="39.0" prefWidth="174.0" style="-fx-background-color: #e90064;" text="Show transactions" textFill="WHITE">
          <font>
             <Font name="Bank Gothic Light BT" size="13.0" />
          </font>

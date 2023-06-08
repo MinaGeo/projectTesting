@@ -43,11 +43,11 @@ try {
         } else {
             if (accountSender != null && accountReciever != null) {
                 Transaction transaction = new Transaction(randomnumber, new Date(), amountTransfer, "transfer", accountSender.getName(), accountReciever.getName());
-                warning.setText(transaction.transfer(amountTransfer, accountSender, accountReciever));
+//                warning.setText(transaction.transfer(amountTransfer, accountSender, accountReciever));
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Transaction details");
                 alert.setHeaderText(null);
-                alert.setContentText(transaction.getTransferDetails());
+                alert.setContentText(transaction.transfer(amountTransfer, accountSender, accountReciever));
                 alert.showAndWait();
             } else {
                 warning.setText("Account not available");

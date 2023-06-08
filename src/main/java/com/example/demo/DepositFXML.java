@@ -38,8 +38,8 @@ public class DepositFXML {
                 Random randomNum = new Random();
                 int showMe = randomNum.nextInt(1000);
                 String randomnumber = String.valueOf(showMe);
-                Transaction transaction = new Transaction(randomnumber, new Date(), amountDeposited, "Deposit", null, null);
                 if (account != null) {
+                    Transaction transaction = new Transaction(randomnumber, new Date(), amountDeposited, "Deposit", null, null);
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Transaction Details");
                     alert.setHeaderText(null);

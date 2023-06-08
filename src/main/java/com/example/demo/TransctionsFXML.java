@@ -5,6 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -12,7 +15,7 @@ import java.io.IOException;
 public class TransctionsFXML {
 
     @FXML
-    private Button depositButton, withdrawButton, transferButton, returnButton, billsButton, buyButton;
+    private Button depositButton, withdrawButton, transferButton, returnButton, billsButton, buyButton, showTransactionsButton;
 
     @FXML
     public void depositFunction() throws IOException {
@@ -88,6 +91,18 @@ public class TransctionsFXML {
         stage.show();
     }
 
+    @FXML
+    public void showTransactions() throws IOException {
+        Stage stage = (Stage) showTransactionsButton.getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("transactionListShow_FXML.fxml"));
+        stage.setTitle("Buy items Screen");
+        stage.setScene(new Scene(root));
+        stage.setWidth(750);
+        stage.setHeight(500);
+        stage.setResizable(false);
+        stage.show();
+    }
 
 
 }

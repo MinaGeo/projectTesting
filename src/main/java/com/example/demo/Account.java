@@ -13,7 +13,12 @@ public class Account
     }
 
     private  String userId;
-   private String Name;
+
+    public String getAccountType() {
+        return accountType;
+    }
+
+    private String Name;
     private String SecurityNumber;
     private double balance;
     private String accountType;
@@ -111,7 +116,17 @@ public class Account
         }
 
     }
+    public static double returnBillPrice(String type){
 
+
+        for (int i = 0; i < bills.size(); i++) {
+            if (bills.get(i).getType().equals(type)) {
+                return bills.get(i).amount;
+            }
+        }
+        return -1;
+
+    }
     int findBill(String type){
 
 
@@ -139,6 +154,15 @@ public class Account
             out+="\n";
         }
         return out;
+    }
+
+    public static String showUserDetails(String securityNumber)
+    {
+        Account userAccount = Account.validation(securityNumber,"test");
+
+        return "Name: "+ userAccount.getName() + ", Email: " +userAccount.getUserId() + ", Account type: "+ userAccount.getAccountType()
+                +", Balance: " + userAccount.getBalance();
+
     }
 
 }

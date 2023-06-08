@@ -20,6 +20,19 @@ public class Transaction {
 
     static ArrayList<Transaction> transactionsList = new ArrayList<>();
 
+
+
+    public static String getTransactionId(){
+        String out="";
+        for(int i=0;i<transactionsList.size();i++){
+            out+=transactionsList.get(i).getTransactionDetails();
+            out+="\n*-------------------------------------------------------------------------------------------------------------------------------*\n";
+        }
+        return out;
+    }
+
+
+
     // Constructor
     public Transaction(String transactionID, Date date, double amount, String transactionType, String sender, String recipient) {
         this.transactionID = transactionID;
@@ -56,18 +69,19 @@ public class Transaction {
         LocalDateTime currentTime = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         String formattedTimestamp = currentTime.format(formatter);
-        return "Transaction ID: " + transactionID + "\nTimestamp: " + formattedTimestamp + "\nAmount: " + amount +
-                "\nTransaction Type: " + transactionType;
+        return "Transaction-ID: " + transactionID + ", Timestamp: " + formattedTimestamp + ", Amount: " + amount +
+                ", Transaction: " + transactionType;
 
     }
-    public String getTransferDetails() {
-        LocalDateTime currentTime = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        String formattedTimestamp = currentTime.format(formatter);
+//    public String getTransferDetails() {
+//        LocalDateTime currentTime = LocalDateTime.now();
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+//        String formattedTimestamp = currentTime.format(formatter);
+//
+//        return "Sender: " + sender + "\nRecipient: " + recipient + "\nAmount: " + amount +
+//                "\ncom.Banking.Transaction Type: " + transactionType + "\nTimestamp: " + formattedTimestamp;
+//    }
 
-        return "Sender: " + sender + "\nRecipient: " + recipient + "\nAmount: " + amount +
-                "\ncom.Banking.Transaction Type: " + transactionType + "\nTimestamp: " + formattedTimestamp;
-    }
     LocalDateTime currentTime = LocalDateTime.now();
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
     String formattedTimestamp = currentTime.format(formatter);
@@ -154,6 +168,15 @@ public class Transaction {
         for (int i = 0; i < items.size(); i++) {
             if (items.get(i).getId().equals(id)) {
                 return i;
+            }
+        }
+        return -1;
+    }
+
+    public static double  returnItemPrice(String id){
+        for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).getId().equals(id)) {
+                return items.get(i).getPrice();
             }
         }
         return -1;
