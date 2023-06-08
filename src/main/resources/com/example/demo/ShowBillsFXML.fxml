@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="510.0" prefWidth="769.0" style="-fx-background-color: #060047;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ShowBillsFXML">
     <children>
-        <Button fx:id="returnButton" layoutX="177.0" layoutY="400.0" mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: #e90064;" text="Return to home" textFill="WHITE">
+        <Button fx:id="returnButton" layoutX="103.0" layoutY="400.0" mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: #e90064;" text="Return to Transaction" textFill="WHITE">
             <font>
                 <Font name="Bank Gothic Light BT" size="13.0" />
             </font>
@@ -45,12 +45,12 @@
             <Font name="Bank Gothic Light BT" size="22.0" />
          </font>
       </Text>
-      <Button fx:id="showBills" layoutX="317.0" layoutY="400.0" mnemonicParsing="false" onAction="#showBills" prefHeight="23.0" prefWidth="129.0" style="-fx-background-color: #e90064;" text="Show bills" textFill="WHITE">
+      <Button fx:id="showBills" layoutX="297.0" layoutY="400.0" mnemonicParsing="false" onAction="#showBills" prefHeight="23.0" prefWidth="178.0" style="-fx-background-color: #e90064;" text="Show bills" textFill="WHITE">
          <font>
             <Font name="Bank Gothic Light BT" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="payBillsButton" layoutX="467.0" layoutY="400.0" mnemonicParsing="false" onAction="#payBills" prefHeight="23.0" prefWidth="129.0" style="-fx-background-color: #e90064;" text="Pay bills" textFill="WHITE">
+      <Button fx:id="payBillsButton" layoutX="492.0" layoutY="400.0" mnemonicParsing="false" onAction="#payBills" prefHeight="23.0" prefWidth="178.0" style="-fx-background-color: #e90064;" text="Pay bills" textFill="WHITE">
          <font>
             <Font name="Bank Gothic Light BT" size="13.0" />
          </font>

@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="510.0" prefWidth="769.0" style="-fx-background-color: #060047;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ItemsBuy">
     <children>
-        <Button fx:id="returnButton" layoutX="132.0" layoutY="400.0" mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: #e90064;" text="Return to home" textFill="WHITE">
+        <Button fx:id="returnButton" layoutX="132.0" layoutY="400.0" mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: #e90064;" text="Return to transaction" textFill="WHITE">
             <font>
                 <Font name="Bank Gothic Light BT" size="13.0" />
             </font>

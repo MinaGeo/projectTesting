@@ -27,7 +27,7 @@
             <Font name="Bank Gothic Light BT" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="transferButton" layoutX="293.0" layoutY="206.0" mnemonicParsing="false" onAction="#transferFunction" prefHeight="39.0" prefWidth="174.0" style="-fx-background-color: #e90064;" text="Transfer" textFill="WHITE">
+      <Button fx:id="transferButton" layoutX="293.0" layoutY="207.0" mnemonicParsing="false" onAction="#transferFunction" prefHeight="39.0" prefWidth="174.0" style="-fx-background-color: #e90064;" text="Transfer" textFill="WHITE">
          <font>
             <Font name="Bank Gothic Light BT" size="13.0" />
          </font>

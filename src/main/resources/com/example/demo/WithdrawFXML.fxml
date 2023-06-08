@@ -9,12 +9,12 @@
 
 <AnchorPane prefHeight="510.0" prefWidth="769.0" style="-fx-background-color: #060047;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.WithdrawFXML">
     <children>
-        <Button fx:id="withdrawButton" layoutX="435.0" layoutY="400.0" mnemonicParsing="false" onAction="#withdrawFunction" prefHeight="23.0" prefWidth="129.0" style="-fx-background-color: #e90064;" text="Withdraw" textFill="WHITE">
+        <Button fx:id="withdrawButton" layoutX="402.0" layoutY="402.0" mnemonicParsing="false" onAction="#withdrawFunction" prefHeight="23.0" prefWidth="178.0" style="-fx-background-color: #e90064;" text="Withdraw" textFill="WHITE">
             <font>
                 <Font name="Bank Gothic Light BT" size="13.0" />
             </font>
         </Button>
-        <Button fx:id="returnButton" layoutX="239.0" layoutY="400.0" mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: #e90064;" text="Return to home" textFill="WHITE">
+        <Button fx:id="returnButton" layoutX="206.0" layoutY="402.0" mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: #e90064;" text="Return to transaction" textFill="WHITE">
             <font>
                 <Font name="Bank Gothic Light BT" size="13.0" />
             </font>

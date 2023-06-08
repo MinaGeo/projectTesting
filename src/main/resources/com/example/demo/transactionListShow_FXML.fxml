@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="510.0" prefWidth="769.0" style="-fx-background-color: #060047;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TransactionListShowFXML">
     <children>
-        <Button fx:id="returnButton" layoutX="34.0" layoutY="425.0" mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: #e90064;" text="Return to home" textFill="WHITE">
+        <Button fx:id="returnButton" layoutX="34.0" layoutY="425.0" mnemonicParsing="false" onAction="#returnHome" prefHeight="23.0" prefWidth="232.0" style="-fx-background-color: #e90064;" text="Return to transaction screen" textFill="WHITE">
             <font>
                 <Font name="Bank Gothic Light BT" size="13.0" />
             </font>

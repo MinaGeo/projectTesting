@@ -9,12 +9,12 @@
 
 <AnchorPane prefHeight="510.0" prefWidth="769.0" style="-fx-background-color: #060047;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TransferFXML">
     <children>
-        <Button fx:id="transferButton" layoutX="430.0" layoutY="388.0" mnemonicParsing="false" onAction="#transferFunction" prefHeight="23.0" prefWidth="118.0" style="-fx-background-color: #e90064;" text="Transfer" textFill="WHITE">
+        <Button fx:id="transferButton" layoutX="397.0" layoutY="410.0" mnemonicParsing="false" onAction="#transferFunction" prefHeight="23.0" prefWidth="178.0" style="-fx-background-color: #e90064;" text="Transfer" textFill="WHITE">
             <font>
                 <Font name="Bank Gothic Light BT" size="13.0" />
             </font>
         </Button>
-        <Button fx:id="returnButton" layoutX="225.0" layoutY="388.0" mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: #e90064;" text="Return to home" textFill="WHITE">
+        <Button fx:id="returnButton" layoutX="192.0" layoutY="410.0" mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: #e90064;" text="Return to Transaction" textFill="WHITE">
             <font>
                 <Font name="Bank Gothic Light BT" size="13.0" />
             </font>

@@ -9,12 +9,12 @@
 
 <AnchorPane prefHeight="510.0" prefWidth="769.0" style="-fx-background-color: #060047;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.DepositFXML">
     <children>
-        <Button fx:id="depositButton" layoutX="392.0" layoutY="388.0" mnemonicParsing="false" onAction="#depositFunction" prefHeight="23.0" prefWidth="119.0" style="-fx-background-color: #e90064;" text="Deposit" textFill="WHITE">
+        <Button fx:id="depositButton" layoutX="392.0" layoutY="404.0" mnemonicParsing="false" onAction="#depositFunction" prefHeight="23.0" prefWidth="178.0" style="-fx-background-color: #e90064;" text="Deposit" textFill="WHITE">
             <font>
                 <Font name="Bank Gothic Light BT" size="13.0" />
             </font>
         </Button>
-        <Button fx:id="returnButton" layoutX="241.0" layoutY="388.0" mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: #e90064;" text="Return to home" textFill="WHITE">
+        <Button fx:id="returnButton" layoutX="192.0" layoutY="404.0" mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: #e90064;" text="Return to transaction" textFill="WHITE">
             <font>
                 <Font name="Bank Gothic Light BT" size="13.0" />
             </font>
