@@ -19,6 +19,7 @@ public class TransctionsFXML {
 
     @FXML
     public void depositFunction() throws IOException {
+        long start=System.currentTimeMillis();
         Stage stage = (Stage) depositButton.getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("DepositFXML.fxml"));
@@ -28,9 +29,13 @@ public class TransctionsFXML {
         stage.setHeight(500);
         stage.setResizable(false);
         stage.show();
+        long finish =System.currentTimeMillis();
+        long ElapsedTime=start-finish;
+        GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
     }
     @FXML
     public void withdrawFunction() throws IOException {
+        long start=System.currentTimeMillis();
         Stage stage = (Stage) withdrawButton.getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("WithdrawFXML.fxml"));
@@ -40,9 +45,13 @@ public class TransctionsFXML {
         stage.setHeight(500);
         stage.setResizable(false);
         stage.show();
+        long finish =System.currentTimeMillis();
+        long ElapsedTime=start-finish;
+        GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
     }
     @FXML
     public void transferFunction() throws IOException {
+        long start=System.currentTimeMillis();
         Stage stage = (Stage) transferButton.getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("TransferFXML.fxml"));
@@ -52,10 +61,14 @@ public class TransctionsFXML {
         stage.setHeight(500);
         stage.setResizable(false);
         stage.show();
+        long finish =System.currentTimeMillis();
+        long ElapsedTime=start-finish;
+        GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
     }
 
     @FXML
     public void returnHome() throws IOException {
+        long start=System.currentTimeMillis();
         Stage stage = (Stage) returnButton.getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("MainUserScreen_FXML.fxml"));
@@ -65,9 +78,13 @@ public class TransctionsFXML {
         stage.setHeight(500);
         stage.setResizable(false);
         stage.show();
+        long finish =System.currentTimeMillis();
+        long ElapsedTime=start-finish;
+        GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
     }
     @FXML
     public void billsFunction() throws IOException {
+        long start=System.currentTimeMillis();
         Stage stage = (Stage) billsButton.getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("ShowBillsFXML.fxml"));
@@ -77,9 +94,13 @@ public class TransctionsFXML {
         stage.setHeight(500);
         stage.setResizable(false);
         stage.show();
+        long finish =System.currentTimeMillis();
+        long ElapsedTime=start-finish;
+        GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
     }
     @FXML
     public void buyItemsFunction() throws IOException {
+        long start=System.currentTimeMillis();
         Stage stage = (Stage) buyButton.getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("ItemsBuy.fxml"));
@@ -89,10 +110,14 @@ public class TransctionsFXML {
         stage.setHeight(500);
         stage.setResizable(false);
         stage.show();
+        long finish =System.currentTimeMillis();
+        long ElapsedTime=start-finish;
+        GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
     }
 
     @FXML
     public void showTransactions() throws IOException {
+        long start=System.currentTimeMillis();
         Stage stage = (Stage) showTransactionsButton.getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("transactionListShow_FXML.fxml"));
@@ -102,6 +127,9 @@ public class TransctionsFXML {
         stage.setHeight(500);
         stage.setResizable(false);
         stage.show();
+        long finish =System.currentTimeMillis();
+        long ElapsedTime=start-finish;
+        GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
     }
 
 

@@ -25,6 +25,7 @@ public class TransactionListShowFXML {
 
     @FXML
     public void returnHome() throws IOException {
+        long start=System.currentTimeMillis();
         Stage stage = (Stage) returnButton.getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("Transctions_FXML.fxml"));
@@ -34,9 +35,13 @@ public class TransactionListShowFXML {
         stage.setHeight(500);
         stage.setResizable(false);
         stage.show();
+        long finish =System.currentTimeMillis();
+        long ElapsedTime=start-finish;
+        GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
     }
     @FXML
     public void showTransactions() throws IOException {
+        long start=System.currentTimeMillis();
 
         try
         {
@@ -47,6 +52,9 @@ public class TransactionListShowFXML {
         {
             warning.setText("Please enter valid data");
         }
+        long finish =System.currentTimeMillis();
+        long ElapsedTime=start-finish;
+        GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
     }
 
 }

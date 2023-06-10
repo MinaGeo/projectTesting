@@ -43,12 +43,16 @@ try {
 
 
         if (account != null) {
+            long start=System.currentTimeMillis();
             Transaction transaction = new Transaction(randomnumber, new Date(), amountWithdraw, "Withdraw", null, null);
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Transaction details");
             alert.setHeaderText(null);
             alert.setContentText(transaction.withdraw(amountWithdraw, account));
             alert.showAndWait();
+            long finish =System.currentTimeMillis();
+            long ElapsedTime=start-finish;
+            GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
 
         } else {
             warning.setText("Account not available");
@@ -65,6 +69,7 @@ catch (Exception e)
     }
     @FXML
     public void returnHome() throws IOException {
+        long start=System.currentTimeMillis();
         Stage stage = (Stage) returnButton.getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("Transctions_FXML.fxml"));
@@ -74,6 +79,9 @@ catch (Exception e)
         stage.setHeight(500);
         stage.setResizable(false);
         stage.show();
+        long finish =System.currentTimeMillis();
+        long ElapsedTime=start-finish;
+        GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
     }
 
 }

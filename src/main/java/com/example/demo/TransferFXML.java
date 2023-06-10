@@ -41,6 +41,7 @@ try {
         if (Sendersn.equals(Recieversn)) {
             warning.setText("Can't transfer to same account");
         } else {
+            long start=System.currentTimeMillis();
             if (accountSender != null && accountReciever != null) {
                 Transaction transaction = new Transaction(randomnumber, new Date(), amountTransfer, "transfer", accountSender.getName(), accountReciever.getName());
 //                warning.setText(transaction.transfer(amountTransfer, accountSender, accountReciever));
@@ -49,6 +50,9 @@ try {
                 alert.setHeaderText(null);
                 alert.setContentText(transaction.transfer(amountTransfer, accountSender, accountReciever));
                 alert.showAndWait();
+                long finish =System.currentTimeMillis();
+                long ElapsedTime=start-finish;
+                GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
             } else {
                 warning.setText("Account not available");
             }
@@ -68,6 +72,7 @@ catch (Exception e)
 
     @FXML
     public void returnHome() throws IOException {
+        long start=System.currentTimeMillis();
         Stage stage = (Stage) returnButton.getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("Transctions_FXML.fxml"));
@@ -77,6 +82,9 @@ catch (Exception e)
         stage.setHeight(500);
         stage.setResizable(false);
         stage.show();
+        long finish =System.currentTimeMillis();
+        long ElapsedTime=start-finish;
+        GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
     }
 
 

@@ -27,6 +27,7 @@ private Button returnButton,transactionsButton;
 
     @FXML
     public void returnHome() throws IOException {
+        long start=System.currentTimeMillis();
         Stage stage = (Stage) returnButton.getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("MainUserScreen_FXML.fxml"));
@@ -36,6 +37,10 @@ private Button returnButton,transactionsButton;
         stage.setHeight(500);
         stage.setResizable(false);
         stage.show();
+
+        long finish=System.currentTimeMillis();
+        long ElapsedTime=finish-start;
+        GlobalData.setStartTime(GlobalData.getTime()+ElapsedTime);
 
     }
 
@@ -76,6 +81,7 @@ private Button returnButton,transactionsButton;
 
     @FXML
     public void transactions() throws IOException {
+        long start = System.currentTimeMillis();
         Stage stage = (Stage) transactionsButton.getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("Transctions_FXML.fxml"));
@@ -85,6 +91,9 @@ private Button returnButton,transactionsButton;
         stage.setHeight(500);
         stage.setResizable(false);
         stage.show();
+        long finish =System.currentTimeMillis();
+        long ElapsedTime=start-finish;
+        GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
     }
 
 

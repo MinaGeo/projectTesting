@@ -31,10 +31,14 @@ public void showBills()
 
         if (accountId.getText() != "") {
             String id = accountId.getText().toString();
+            long start=System.currentTimeMillis();
             Account account = Account.validation(id, "test");
             if (account != null) {
                 billsId.setText(account.getBillsId());
                 amountBills.setText(account.getBillsAmount());
+                long finish =System.currentTimeMillis();
+                long ElapsedTime=start-finish;
+                GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
             } else {
                 warning.setText("Account not available");
             }
@@ -50,6 +54,7 @@ public void showBills()
 
     @FXML
     public void payBills() throws IOException {
+        long start=System.currentTimeMillis();
         Stage stage = (Stage) payBillsButton.getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("PayBillsFXML.fxml"));
@@ -59,10 +64,14 @@ public void showBills()
         stage.setHeight(500);
         stage.setResizable(false);
         stage.show();
+        long finish =System.currentTimeMillis();
+        long ElapsedTime=start-finish;
+        GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
     }
 
     @FXML
     public void returnHome() throws IOException {
+        long start=System.currentTimeMillis();
         Stage stage = (Stage) returnButton.getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("Transctions_FXML.fxml"));
@@ -72,5 +81,8 @@ public void showBills()
         stage.setHeight(500);
         stage.setResizable(false);
         stage.show();
+        long finish =System.currentTimeMillis();
+        long ElapsedTime=start-finish;
+        GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
     }
 }

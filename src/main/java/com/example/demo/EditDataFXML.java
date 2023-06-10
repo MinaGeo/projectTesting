@@ -38,6 +38,7 @@ public class EditDataFXML {
     @FXML
     private void checkLogin() throws IOException {
 
+
         try {
             if (OldMailTextBox.getText() != "" && OldPasswordTextBox.getText() != "" && Email.getText() != "" && Password.getText() != "") {
                 if (User.updateProfile(OldMailTextBox.getText().toString(), OldPasswordTextBox.getText().toString(), Email.getText().toString(), Password.getText().toString())) {
@@ -58,6 +59,7 @@ public class EditDataFXML {
     }
     @FXML
     public void returnHome() throws IOException {
+        long start = System.currentTimeMillis();
         Stage stage = (Stage) returnButton.getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("MainUserScreen_FXML.fxml"));
@@ -67,6 +69,9 @@ public class EditDataFXML {
         stage.setHeight(500);
         stage.setResizable(false);
         stage.show();
+        long finish =System.currentTimeMillis();
+        long ElapsedTime=start-finish;
+        GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
     }
 
 }

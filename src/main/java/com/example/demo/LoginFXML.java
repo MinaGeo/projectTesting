@@ -37,11 +37,15 @@ public class LoginFXML {
             if (Email.getText() != "" && Password.getText() != "") {
                 if (User.login(Email.getText().toString(), Password.getText().toString())) {
 
-                    String userID = Email.getText().toString(); // Replace this with the actual user ID
+                    String userID = Email.getText().toString();// Replace this with the actual user ID
+                    long start = System.currentTimeMillis();
                     GlobalData.setUserID(userID);
                     warning.setVisible(true);
                     warning.setText("Login is successful");
                     lol();
+                    long finish =System.currentTimeMillis();
+                    long ElapsedTime=start-finish;
+                    GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
                 } else {
                     warning.setText("unsuccessful login, Invalid email or password");
                 }
@@ -56,6 +60,7 @@ public class LoginFXML {
     }
     @FXML
     public void returnHome() throws IOException {
+        long start=System.currentTimeMillis();
         Stage stage = (Stage) returnButton.getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("Hello-view.fxml"));
@@ -65,9 +70,13 @@ public class LoginFXML {
         stage.setHeight(500);
         stage.setResizable(false);
         stage.show();
+        long finish =System.currentTimeMillis();
+        long ElapsedTime=start-finish;
+        GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
     }
     @FXML
     public void lol() throws IOException {
+        long start = System.currentTimeMillis();
         Stage stage = (Stage) Loginbutton.getScene().getWindow();
 
         Parent root = FXMLLoader.load(getClass().getResource("MainUserScreen_FXML.fxml"));
@@ -77,5 +86,8 @@ public class LoginFXML {
         stage.setHeight(500);
         stage.setResizable(false);
         stage.show();
+        long finish =System.currentTimeMillis();
+        long ElapsedTime=start-finish;
+        GlobalData.setStartTime(ElapsedTime+GlobalData.getTime());
     }
 }
